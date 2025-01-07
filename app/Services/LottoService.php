@@ -52,7 +52,14 @@ class LottoService
                 'rank1_winners' => $data['firstPrzwnerCo'],
                 'rank1_prize_amount' => $data['firstWinamnt'],
                 'total_prize_amount' => $data['totSellamnt'],
-                // 나머지 등수별 정보는 별도의 API 호출 필요
+                'rank2_winners' => $data['secondPrzwnerCo'] ?? null,
+                'rank2_prize_amount' => $data['secondWinamnt'] ?? null,
+                'rank3_winners' => $data['thirdPrzwnerCo'] ?? null,
+                'rank3_prize_amount' => $data['thirdWinamnt'] ?? null,
+                'rank4_winners' => $data['fourthPrzwnerCo'] ?? null,
+                'rank4_prize_amount' => $data['fourthWinamnt'] ?? 50000,
+                'rank5_winners' => $data['fifthPrzwnerCo'] ?? null,
+                'rank5_prize_amount' => $data['fifthWinamnt'] ?? 5000,
             ]);
 
             return $draw;
@@ -107,14 +114,14 @@ class LottoService
                             'rank1_winners' => $data['firstPrzwnerCo'],
                             'rank1_prize_amount' => $data['firstWinamnt'],
                             'total_prize_amount' => $data['totSellamnt'],
-                            'rank2_winners' => $data['secondPrzwnerCo'] ?? 0,
-                            'rank2_prize_amount' => $data['secondWinamnt'] ?? 0,
-                            'rank3_winners' => $data['thirdPrzwnerCo'] ?? 0,
-                            'rank3_prize_amount' => $data['thirdWinamnt'] ?? 0,
-                            'rank4_winners' => $data['fourthPrzwnerCo'] ?? 0,
-                            'rank4_prize_amount' => $data['fourthWinamnt'] ?? 0,
-                            'rank5_winners' => $data['fifthPrzwnerCo'] ?? 0,
-                            'rank5_prize_amount' => $data['fifthWinamnt'] ?? 0,
+                            'rank2_winners' => $data['secondPrzwnerCo'] ?? null,
+                            'rank2_prize_amount' => $data['secondWinamnt'] ?? null,
+                            'rank3_winners' => $data['thirdPrzwnerCo'] ?? null,
+                            'rank3_prize_amount' => $data['thirdWinamnt'] ?? null,
+                            'rank4_winners' => $data['fourthPrzwnerCo'] ?? null,
+                            'rank4_prize_amount' => $data['fourthWinamnt'] ?? 50000,
+                            'rank5_winners' => $data['fifthPrzwnerCo'] ?? null,
+                            'rank5_prize_amount' => $data['fifthWinamnt'] ?? 5000,
                         ]
                     );
 
